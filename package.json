@@ -1,7 +1,7 @@
 {
   "name": "last-request",
-  "version": "0.0.1",
-  "description": "A minimalist express middleware providing inspection capabilities for the last request.",
+  "version": "0.0.1-alpha.0",
+  "description": "Last request inspection capability for express.",
   "main": "index.js",
   "scripts": {
     "test": "mocha test"
@@ -15,6 +15,11 @@
   "bugs": {
     "url": "https://github.com/dewe/last-request/issues"
   },
+  "keywords": [
+    "express",
+    "middleware",
+    "testing"
+  ],
   "homepage": "https://github.com/dewe/last-request",
   "devDependencies": {
     "grunt": "^0.4.5",
