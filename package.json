@@ -1,6 +1,6 @@
 {
   "name": "last-request",
-  "version": "0.0.1",
+  "version": "0.0.1-alpha",
   "description": "A minimalist express middleware providing inspection capabilities for the last request.",
   "main": "index.js",
   "scripts": {
