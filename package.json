@@ -1,0 +1,24 @@
+{
+  "name": "last-request",
+  "version": "0.0.1",
+  "description": "A minimalist express middleware providing inspection capabilities for the last request.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dewe/last-request.git"
+  },
+  "author": "Johan Dewe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dewe/last-request/issues"
+  },
+  "homepage": "https://github.com/dewe/last-request",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-release": "^0.12.0",
+    "mocha": "^2.2.5"
+  }
+}
