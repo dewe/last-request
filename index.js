@@ -5,7 +5,7 @@ var url = require('url');
 module.exports = function () {
     var incomingRequests = [];
 
-    var history = function (req, res, next) {
+    var recorder = function (req, res, next) {
         if (req) {
             var parsed = parseRequest(req);
             incomingRequests.push(parsed);
@@ -13,19 +13,19 @@ module.exports = function () {
         next && next();
     };
 
-    history.lastRequest = function () {
+    recorder.lastRequest = function () {
         return incomingRequests[incomingRequests.length - 1];
     };
 
-    history.requests = function () {
+    recorder.requests = function() {
         return incomingRequests;
     };
 
-    history.reset = function () {
+    recorder.reset = function () {
         incomingRequests = [];
     };
 
-    return history;
+    return recorder;
 };
 
 function parseRequest(req) {
