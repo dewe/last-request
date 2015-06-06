@@ -70,42 +70,19 @@ describe('lastRequest', function () {
             });
     });
 
-
-    it.skip('should return undefined last request if server was never called', function () {
-        assert.isUndefined(server.lastRequest());
+    it('return undefined last request if never called', function () {
+        assert.isUndefined(history.lastRequest());
     });
 
-    it.skip('should save request history even if there is no matching handler', function (done) {
-        // no route registered
-        request.get(url, function (err, res, body) {
-            assert.equal(res.statusCode, 500);
-            assert.include(body, 'Missing handler');
-            assert.isDefined(server.lastRequest());
-            done();
-        });
-    });
-
-    it.skip('should save request history before handler is called', function (done) {
-        var lastRequest;
-        server.setHandler(function () {
-            lastRequest = server.lastRequest();
-
-        });
-        request.get(url, function () {
-            assert.isDefined(lastRequest);
-            done();
-        });
-    });
-
-    it.skip('should expose request history', function (done) {
-        server.register('GET');
-        request.get(url, function () {
-            server.register('GET');
-            request.get(url, function () {
-                assert.isArray(server.requestHistory());
-                assert.lengthOf(server.requestHistory(), 2);
+    it('should expose request history', function (done) {
+        request(app).get('/').expect(200).end();
+        request(app)
+            .get('/')
+            .expect(200)
+            .end(function () {
+                assert.isArray(history.requests());
+                assert.lengthOf(history.requests(), 3);
                 done();
             });
-        });
     });
 });
