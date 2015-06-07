@@ -6,13 +6,13 @@ var lastrequest = require('../index.js');
 describe('middleware behaviour', function () {
 
     it('calls next', function (done) {
-        var history = lastrequest();
-        history(null, null, done);
+        var middleware = lastrequest();
+        middleware(null, null, done);
     });
 
     it('works without next', function() {
-        var history = lastrequest();
-        history(null, null);
+        var middleware = lastrequest();
+        middleware(null, null);
     })
 
 });

@@ -74,7 +74,7 @@ describe('lastRequest()', function () {
             });
     });
 
-    it('return undefined last request if never called', function () {
+    it('returns undefined last request if never called', function () {
         assert.isUndefined(recorder.lastRequest());
     });
 
