@@ -15,7 +15,7 @@ app.use(function (req, res) {
 
 ...
 
-// Make asserts during test
+// Make assertions
 request.get('http://my-out-of-process-server:4711', function (err, res) {
     // Verify call has happened end-to-end as expected.
     assert(res.statusCode === 200);
