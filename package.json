@@ -1,6 +1,6 @@
 {
   "name": "last-request",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Last request inspection capability for express",
   "main": "index.js",
   "scripts": {
