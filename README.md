@@ -1,4 +1,6 @@
 # last-request
+[![Build Status](https://travis-ci.org/dewe/last-request.svg?branch=master)](https://travis-ci.org/dewe/last-request)
+
 A minimalist express middleware logging requests in memory. Useful for inspecting the 
 last incoming request, when running express as a fake server.
 
