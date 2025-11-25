@@ -27,6 +27,6 @@
     "grunt": "^1.6.1",
     "grunt-release": "^0.14.0",
     "mocha": "^11.7.5",
-    "supertest": "^1.0.1"
+    "supertest": "^7.1.4"
   }
 }
