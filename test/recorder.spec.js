@@ -69,7 +69,7 @@ describe('lastRequest()', function () {
             .set('X-My-Custom-Header', 'foobar')
             .expect(200)
             .end(function () {
-                assert.deepProperty(recorder.lastRequest().headers, 'x-my-custom-header');
+                assert.property(recorder.lastRequest().headers, 'x-my-custom-header');
                 done();
             });
     });
